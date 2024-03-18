@@ -1,0 +1,1 @@
+export * from './pretBancaire.dto';

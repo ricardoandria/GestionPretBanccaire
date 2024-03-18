@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model pretBancaire {
+  id             Int    @id @default(autoincrement())
+  nomClient  String @db.VarChar(50)
+  nomBanque     String @db.VarChar(50)
+  montant Int
+  createdAt      DateTime @default(now())
+  tauxPret Int
+}
